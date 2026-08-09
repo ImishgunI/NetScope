@@ -1,0 +1,2 @@
+Checks: '-*,bugprone-*,performance-*,modernize-*,readability-*,-modernize-use-trailing-return-type'
+WarningsAsErrors: 'bugprone-*'
