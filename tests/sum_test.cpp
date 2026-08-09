@@ -1,6 +1,5 @@
-#include <cassert>
 #include "../src/util/sum.hpp"
-
+#include <cassert>
 
 void test_sum_positive_numbers() {
     int a = 5;
@@ -10,4 +9,3 @@ void test_sum_positive_numbers() {
 
     assert(sum(a, b) == expected);
 }
-
