@@ -1,14 +1,12 @@
 BasedOnStyle: LLVM
 IndentWidth: 4
 ColumnLimit: 120
-AlignAfterOpenBracket: true
+AlignAfterOpenBracket: Align
 AlignConsecutiveAssignments: None
 AlignConsecutiveBitFields: Consecutive
-AlignConsecutiveMacros: AcrossEmptyLines
 AlignEscapedNewlines: Left
-AllowShortBlocksOnASingleLine: Always
+AllowShortBlocksOnASingleLine: Empty
 AllowShortCaseExpressionOnASingleLine: true
-AllowShortIfStatementsOnASingleLine: WithoutElse
 BitFieldColonSpacing: Both
 BreakBeforeBraces: Custom
 BraceWrapping:
@@ -16,8 +14,6 @@ BraceWrapping:
   AfterStruct: false
   SplitEmptyFunction: false
   AfterClass: false
-BreakBeforeCloseBracketBracedList: true
-BreakBeforeCloseBracketFunction: true
 PointerAlignment: Left
 ReferenceAlignment: Left
 IncludeBlocks: Preserve
