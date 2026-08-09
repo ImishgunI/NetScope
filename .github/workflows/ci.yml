@@ -1,8 +1,23 @@
-name: help
-on: [push]
+name: run-tests
+on:
+  push:
+    branches: [ main ]
+
 jobs:
-  our-help:
+  build-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Run hello
-          run: echo "Hello New Project"
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Install dependencies
+        uses: sudo apt install build-essential cmake
+
+      - name: Configure project
+        uses: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
+
+      - name: Build project
+        uses: cmake --build build
+
+      - name: Run tests
+        uses: ctest --test-dir build
