@@ -1,0 +1,8 @@
+name: help
+on: [push]
+jobs:
+  our-help:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run hello
+          run: echo "Hello New Project"
