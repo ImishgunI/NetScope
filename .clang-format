@@ -6,7 +6,6 @@ AlignConsecutiveAssignments: None
 AlignConsecutiveBitFields: Consecutive
 AlignEscapedNewlines: Left
 AllowShortBlocksOnASingleLine: Empty
-AllowShortCaseExpressionOnASingleLine: true
 BitFieldColonSpacing: Both
 BreakBeforeBraces: Custom
 BraceWrapping:
