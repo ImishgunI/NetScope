@@ -8,8 +8,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror -Wextra -Wpedantic -g")
 
 
-set(HEADERS src/util/sum.hpp)
-set(SOURCES src/util/sum.cpp)
+set(HEADERS src/util/sum.hpp src/capture/capture.hpp)
+set(SOURCES src/util/sum.cpp src/capture/capture.cpp)
 
 set(TEST_SOURCES tests/main_test.cpp tests/sum_test.cpp tests/sum_test.hpp)
 
