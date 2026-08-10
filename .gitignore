@@ -67,3 +67,7 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+
+# scripts for debugging
+sudo_gdb.sh
