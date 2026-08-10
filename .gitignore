@@ -71,3 +71,6 @@ Testing/
 
 # scripts for debugging
 sudo_gdb.sh
+
+# ide dirs
+.vscode/
