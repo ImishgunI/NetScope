@@ -15,9 +15,10 @@ jobs:
 
       - name: Run clang-format check 
         run: |
+          clang-format --version
           find src tests -type f \( -name '*.cpp' -o -name '*.hpp' \) -print0 |
           while IFS= read -r -d '' file; do
-              clang-format --dry-run --Werror "$file"
+              clang-format --style=file:../../.clang-format --dry-run --Werror "$file"
           done
 
       - name: Configure project
