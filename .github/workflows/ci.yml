@@ -13,20 +13,11 @@ jobs:
       - name: Install dependencies
         run: sudo apt install -y build-essential cmake clang-tidy wget gnupg
 
-      - name: Setup clang-format
-        run: |
-          sudo wget https://apt.llvm.org/llvm.sh
-          sudo chmod +x llvm.sh
-          sudo ./llvm.sh 22
-          sudo ln -sf /usr/bin/clang-format-22 /usr/bin/clang-format
-
       - name: Run clang-format check
-        run: |
-          clang-format --version
-          find src tests -type f \( -name '*.cpp' -o -name '*.hpp' \) -print0 |
-          while IFS= read -r -d '' file; do
-              clang-format --style=file:/home/runner/work/NetScope/NetScope/.clang-format --dry-run --Werror "$file"
-          done
+        uses: jidicula/clang-format-action@v1
+        with:
+          clang-format-version: '22'
+          check-path: 'src'
 
       - name: Configure project
         run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
