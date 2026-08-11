@@ -14,7 +14,7 @@ jobs:
         run: sudo apt install -y build-essential cmake clang-tidy wget gnupg
 
       - name: Run clang-format check
-        uses: jidicula/clang-format-action@v1
+        uses: jidicula/clang-format-action@v4
         with:
           clang-format-version: '22'
           check-path: 'src'
